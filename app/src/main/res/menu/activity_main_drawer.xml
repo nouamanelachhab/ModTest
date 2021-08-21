@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single" android:id="@+id/first" >
+
+        <item
+            android:id="@+id/nav_movies"
+            android:icon="@drawable/ic_movie"
+            android:title="Movies"
+            />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_serie"
+            android:title="Series" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_manga"
+            android:title="Manga" />
+        <item
+            android:id="@+id/nav_livetv"
+            android:icon="@drawable/ic_livetv"
+            android:title="Live TV"
+            />
+        <item
+            android:id="@+id/nav_programstv"
+            android:icon="@drawable/ic_tvprogram"
+            android:title="TV Programs" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_news"
+            android:title="News" />
+
+    </group>
+
+
+
+    <group android:checkableBehavior="single" android:id="@+id/history">
+        <item
+            android:id="@+id/subtitle"
+            android:title="history"
+            >
+        <menu>
+        <item
+            android:id="@+id/nav_seen"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Movies Seen"
+            />
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="My Favourite" />
+        <item
+            android:id="@+id/nav_trakt"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Trakt" />
+        </menu>
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/tools">
+        <item
+            android:title="tools"
+            >
+            <menu>
+                <item
+                    android:id="@+id/dowloands"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Downloads"
+                    />
+
+            </menu>
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/others">
+        <item
+            android:title="others"
+            >
+            <menu>
+                <item
+                    android:id="@+id/settings"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Settings"
+                    />
+                <item
+                    android:id="@+id/facebook"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Facebook"
+                    />
+                <item
+                    android:id="@+id/twitter"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Twitter"
+                    />
+                <item
+                    android:id="@+id/discord"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Discord"
+                    />
+                <item
+                    android:id="@+id/exit"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Exit"
+                    />
+
+
+            </menu>
+        </item>
+
+    </group>
+
+</menu>
