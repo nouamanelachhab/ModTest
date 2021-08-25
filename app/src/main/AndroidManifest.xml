@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlexFree">
-        <activity android:name=".Slides"></activity>
+        <activity android:name=".FirstSlides"></activity>
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
