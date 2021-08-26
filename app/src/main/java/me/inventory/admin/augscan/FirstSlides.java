@@ -7,6 +7,7 @@ import android.app.StatusBarManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 
@@ -29,5 +30,10 @@ public class FirstSlides extends AppCompatActivity {
         vpg.setAdapter(sliderAdapter);
 
 
+    }
+
+    public void next (View aa) {
+        Intent intent1 = new Intent(FirstSlides.this, Home.class);
+        startActivity(intent1);
     }
 }
