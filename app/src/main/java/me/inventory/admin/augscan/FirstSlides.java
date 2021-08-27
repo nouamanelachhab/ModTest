@@ -1,10 +1,12 @@
 package me.inventory.admin.augscan;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.StatusBarManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
@@ -20,7 +22,7 @@ public class FirstSlides extends AppCompatActivity {
     private LinearLayout la;
     private SliderAdapter sliderAdapter;
     private TextView[] mDots;
-
+    private AppBarLayout appBarLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +37,26 @@ public class FirstSlides extends AppCompatActivity {
         vpg.addOnPageChangeListener(viewListener);
 
 
+
     }
 
     public void next (View aa) {
-        Intent intent1 = new Intent(FirstSlides.this, Home.class);
+        Intent intent1 = new Intent(FirstSlides.this, Step1.class);
         startActivity(intent1);
+    }
+    public void goprivacy(View aa){
+        Intent viewIntent =
+                new Intent("android.intent.action.VIEW",
+                        Uri.parse("https://freeflixhqpro.com/privacy-policy/"));
+        startActivity(viewIntent);
+
+    }
+    public void godisclamer(View aa){
+        Intent viewIntent =
+                new Intent("android.intent.action.VIEW",
+                        Uri.parse("https://freeflixhqpro.com/disclaimer/"));
+        startActivity(viewIntent);
+
     }
 
     public void addDotsIndicator(int position){
@@ -60,6 +77,8 @@ public class FirstSlides extends AppCompatActivity {
         }
 
     }
+
+
 
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
         @Override
