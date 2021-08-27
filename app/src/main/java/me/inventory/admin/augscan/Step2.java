@@ -87,8 +87,8 @@ public class Step2 extends AppCompatActivity {
                     finish();
                 }
                 else {
-                    Toast.makeText(aa.getContext(), "Invalid Email!",
-                        Toast.LENGTH_LONG).show();
+
+                    input1.setError("Invalid Email!");
                     textView.setText("CONTINUE");
                     progressBar.setVisibility(View.GONE);
                     progressBar.clearAnimation();

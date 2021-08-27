@@ -187,7 +187,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="30dp"
+
 
             android:background="@drawable/button"
 
@@ -195,10 +195,10 @@
             android:onClick="next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.469"
+            app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView6"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.188"
             app:layout_constraintWidth_percent="0.75">
 
             <ImageView
