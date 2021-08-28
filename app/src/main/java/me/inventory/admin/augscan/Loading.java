@@ -1,10 +1,12 @@
 package me.inventory.admin.augscan;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -23,6 +25,7 @@ public class Loading extends AppCompatActivity {
     private int counter;
     private int time;
     private ImageView progressBar;
+    private ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class Loading extends AppCompatActivity {
         rotateAnimation.setDuration(700);
         rotateAnimation.setRepeatCount(Animation.INFINITE);
         progressBar = findViewById(R.id.progressBar);
+        image = findViewById(R.id.imageView6);
+        image.setVisibility(View.VISIBLE);
         progressBar.setAnimation(rotateAnimation);
         CharSequence[] txt = {"Account Processing.","Account Processing..","Account Processing...","Saving Informations.","Saving Informations..","Saving Informations...","Connecting To Server.","Connecting To Server..","Connecting To Server..."};
 
@@ -58,6 +63,7 @@ public class Loading extends AppCompatActivity {
         // first thread
         counterThread=new Thread(()->{
             try{
+                image.setBackground(ContextCompat.getDrawable(this ,R.drawable.account));
                 while(true){
                     if(counter == 0)
                     {
@@ -88,6 +94,7 @@ public class Loading extends AppCompatActivity {
 
         counterThread2=new Thread(()->{
             try{
+                image.setBackground(ContextCompat.getDrawable(this ,R.drawable.saving));
                 while(true){
                     if(counter == 0)
                     {
@@ -119,6 +126,7 @@ public class Loading extends AppCompatActivity {
 
         counterThread3=new Thread(()->{
             try{
+                image.setBackground(ContextCompat.getDrawable(this ,R.drawable.server));
                 while(true){
                     if(counter == 0)
                     {
@@ -150,15 +158,9 @@ public class Loading extends AppCompatActivity {
 
 
 
+
+
         counterThread.start();
-
-
-
-
-
-
-
-
 
 
 
@@ -171,6 +173,7 @@ public class Loading extends AppCompatActivity {
 
                 counterThread.interrupt();
                 counter =0;
+
                 counterThread2.start();
 
             }
