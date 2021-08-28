@@ -9,15 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlexFree">
-        <activity android:name=".Step3"></activity>
-        <activity android:name=".Step2" />
-        <activity android:name=".Step1" />
-        <activity android:name=".FirstSlides" />
+        <activity android:name=".Loading"></activity>
+        <activity
+            android:name=".Step3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Step2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Step1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FirstSlides"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.FlexFree.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

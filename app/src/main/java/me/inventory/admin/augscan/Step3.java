@@ -74,7 +74,7 @@ public class Step3 extends AppCompatActivity {
             public void run() {
                 if (!input1.getText().toString().matches("")) {
                     if (input1.getText().toString().equals(input2.getText().toString())) {
-                        Intent homeIntent = new Intent(Step3.this, Home.class);
+                        Intent homeIntent = new Intent(Step3.this, Loading.class);
                         startActivity(homeIntent);
                         finish();
                     }
@@ -98,6 +98,6 @@ public class Step3 extends AppCompatActivity {
 
 
             }
-        },getRandom(500,4000));
+        },getRandom(500,3000));
     }
 }
