@@ -42,6 +42,7 @@
             android:padding="0dp"
             android:paddingTop="2dp">
 
+
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="112dp"
@@ -94,7 +95,6 @@
                 android:layout_marginTop="6dp"
                 />
 
-
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -119,23 +119,24 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="0dp"
-            android:layout_height="79dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_gravity="left"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="28dp"
             android:foregroundGravity="left"
             android:paddingTop="3dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.294"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.6"
-            app:srcCompat="@drawable/tools"
+            app:srcCompat="@drawable/texticon"
             tools:ignore="MissingConstraints" />
+
 
         <TextView
             android:id="@+id/textView2"
@@ -146,8 +147,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="64dp"
-            android:text="Account Configuration"
+            android:layout_marginTop="72dp"
+            android:text="Enter your password"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -157,31 +158,95 @@
             app:layout_constraintTop_toBottomOf="@id/imageView4"
             app:layout_constraintWidth_percent="0.75" />
 
-        <TextView
-            android:id="@+id/textView6"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEditText"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="121dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="4dp"
+            android:textColorHint="#FFFFFF"
             android:layout_below="@+id/textView2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="28dp"
-            android:text="FreeFlix is a customizable app. You need first to create an account using your email to start using FreeFlix app."
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:typeface="normal"
+            app:boxBackgroundColor="#7A104C56"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxStrokeErrorColor="#FFFFFF"
+            app:counterTextColor="@color/transparentwhite"
+            app:errorTextColor="#FFFFFF"
+            app:helperTextTextColor="#FFFFFF"
+            app:hintTextColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView2"
-            app:layout_constraintWidth_percent="0.75" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintWidth_percent="0.75"
+            app:placeholderTextColor="#FFFFFF"
+            app:prefixTextColor="#FFFFFF"
+            app:suffixTextColor="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:hint="password"
+
+                android:password="true"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintStart_toStartOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEditText2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="4dp"
+            android:textColorHint="#FFFFFF"
+            android:layout_below="@+id/textInputEditText"
+            app:boxBackgroundColor="#7A104C56"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxStrokeErrorColor="#FFFFFF"
+            app:counterTextColor="@color/transparentwhite"
+            app:errorTextColor="#FFFFFF"
+            app:helperTextTextColor="#FFFFFF"
+            app:hintTextColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
+            app:layout_constraintWidth_percent="0.75"
+            app:placeholderTextColor="#FFFFFF"
+            app:prefixTextColor="#FFFFFF"
+            app:suffixTextColor="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+
+                android:id="@+id/input2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:hint="confirm password"
+
+                android:password="true"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintStart_toStartOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/textView6"
+            android:layout_below="@+id/textInputEditText2"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -197,7 +262,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView6"
+            app:layout_constraintTop_toBottomOf="@id/textInputEditText2"
             app:layout_constraintVertical_bias="0.256"
             app:layout_constraintWidth_percent="0.75">
 
