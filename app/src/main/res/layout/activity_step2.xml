@@ -148,7 +148,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="100dp"
-            android:text="Create you account"
+            android:text="Create your account"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
